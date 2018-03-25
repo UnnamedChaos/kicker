@@ -27,12 +27,16 @@ public class TeamService extends GenericService<Team> {
 	}
 
 	public Team create(Team team) {
-		List<Team> teams = teamRepository.findAllByMembersIn(team.getMembers());
-		if (teams.size() > 0) {
-			throw new ServiceException("create", "User can only be in one team");
-		}
 		return save(team);
 
+	}
+
+	public Team findTeam(String id) {
+		Optional<Team> team = teamRepository.findById(id);
+		if (team.isPresent()) {
+			return team.get();
+		}
+		throw new ServiceException("find Team", "Cannot find team");
 	}
 
 	public Team save(Team team) {
@@ -60,5 +64,10 @@ public class TeamService extends GenericService<Team> {
 		} else {
 			throw new ServiceException("modify", "Cannot find team");
 		}
+	}
+
+	@Override
+	public void verify(Team t) {
+
 	}
 }

@@ -35,4 +35,10 @@ public class UserService extends GenericService<User> {
 		user.setName(userTO.getName());
 		return user;
 	}
+
+	@Override
+	public void verify(User t) {
+		// TODO Auto-generated method stub
+
+	}
 }

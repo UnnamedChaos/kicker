@@ -3,12 +3,12 @@ package de.nieder.kick.model;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Team extends BaseEntity {
 
-	@OneToMany
+	@ManyToMany
 	private List<User> members;
 
 	public List<User> getMembers() {

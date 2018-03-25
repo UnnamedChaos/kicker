@@ -9,4 +9,5 @@ import de.nieder.kick.model.Game;
 public interface GameRepository extends CrudRepository<Game, String> {
 
 	public List<Game> findAll();
+
 }
