@@ -20,7 +20,7 @@ import de.nieder.kick.model.Team;
 import de.nieder.kick.services.TeamService;
 
 @RestController
-@RequestMapping(path = "/api/v1/team")
+@RequestMapping(path = "/api/v1/teams")
 public class TeamController {
 
 	@Autowired

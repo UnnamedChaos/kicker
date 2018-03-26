@@ -15,7 +15,7 @@ import de.nieder.kick.model.User;
 import de.nieder.kick.services.UserService;
 
 @RestController
-@RequestMapping(path = "/api/v1/user")
+@RequestMapping(path = "/api/v1/users")
 public class UserController {
 
 	@Autowired
