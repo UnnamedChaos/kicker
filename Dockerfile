@@ -12,5 +12,5 @@ WORKDIR /app
 
 EXPOSE 8080
 
-ENV JAVA_OPTS="-Xmx2048m -XX:-UseGCOverheadLimit"
+ENV JAVA_OPTS="-Xmx1024m -XX:-UseGCOverheadLimit"
 ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /app/kick-backend.jar"]
