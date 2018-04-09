@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM hypriot/rpi-java
 MAINTAINER Snieder
 
 ARG NAME=kicker
